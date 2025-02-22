@@ -154,7 +154,7 @@ def train(network, data_loader, X_val, y_val, params, aggregation_mat=None):
   
         val_losses.append(val_loss)
 
-    # network.load_state_dict(torch.load('checkpoint.pt'))
+    network.load_state_dict(torch.load('checkpoint.pt'))
     return losses, c_losses, val_losses
 
 
